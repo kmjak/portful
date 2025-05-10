@@ -10,5 +10,5 @@ import { twMerge } from "tailwind-merge";
  * @returns 結合後に競合を解消したクラス名文字列
  */
 export default function cn(...inputs: ClassValue[]): string {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(...inputs));
 }
