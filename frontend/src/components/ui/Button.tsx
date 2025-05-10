@@ -1,7 +1,7 @@
-import { JSX, ReactNode } from "react";
+import { ButtonHTMLAttributes, JSX, ReactNode } from "react";
 import cn from "@/utils/tailwindcss/cn";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
