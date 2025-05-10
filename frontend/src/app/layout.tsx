@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { JSX } from "react";
-import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 import "./globals.css";
 
-const geistSans: NextFontWithVariable = Geist({
+const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono: NextFontWithVariable = Geist_Mono({
+const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
