@@ -5,6 +5,17 @@ interface PageTitleProps extends HTMLProps<HTMLHeadingElement> {
   children: ReactNode;
 }
 
+/**
+ * @description
+ * 再利用可能なPageTitleコンポーネント
+ * ページのタイトルや見出しを表示するために使うことを想定している
+ * classNameプロパティを使ってスタイルを追加・上書きすることができる
+ *
+ * @param {string} [className] - 追加のCSSクラス
+ * @param {ReactNode} children - タイトルの内容
+ * @param {HTMLProps<HTMLHeadingElement>} props - HTMLの標準的なh1の属性
+ * @returns {JSX.Element} - PageTitleコンポーネント
+ */
 export default function PageTitle({ children, className, ...props }: PageTitleProps): JSX.Element {
   return (
     <h1
