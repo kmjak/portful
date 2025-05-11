@@ -18,6 +18,7 @@ const eslintConfig = [
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended"
   ),
+
   {
     files: ["**/*.{ts,tsx,js,jsx}"],
     rules: {
@@ -41,6 +42,7 @@ const eslintConfig = [
       ],
     },
   },
+
   {
     files: ["**/*.ts"],
     rules: {
@@ -49,6 +51,19 @@ const eslintConfig = [
         {
           selector: "function",
           format: ["camelCase"],
+        },
+      ],
+    },
+  },
+
+  {
+    files: ["**/app/api/**/*.ts"],
+    rules: {
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          selector: "function",
+          format: ["UPPER_CASE"],
         },
       ],
     },
