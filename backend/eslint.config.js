@@ -16,7 +16,7 @@ const compat = new FlatCompat({
 export default defineConfig([
   ...compat.extends("plugin:prettier/recommended"),
   { files: ["**/*.{js,mjs}"], plugins: { js }, extends: ["js/recommended"] },
-  { files: ["**/*.{js,mjs}"], languageOptions: { globals: globals.browser } },
+  { files: ["**/*.{js,mjs}"], languageOptions: { globals: globals.node } },
   {
     files: ["**/*.{js,mjs"],
     rules: { "prettier/prettier": "error" },
