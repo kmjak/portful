@@ -15,8 +15,20 @@ export default async function loginWithGoogleProvider(): Promise<string | undefi
     }
 
     const idToken: string = await auth.currentUser.getIdToken();
+
+    await auth.signOut();
     return idToken;
   } catch (error) {
+    if (auth.currentUser) {
+      try {
+        await auth.signOut();
+      } catch (signOutError) {
+        if (process.env.NODE_ENV === "development") {
+          console.error("Error signing out after login:", signOutError);
+        }
+      }
+    }
+
     if (process.env.NODE_ENV === "development") {
       console.error("Error signing in with Google:", error);
     }
