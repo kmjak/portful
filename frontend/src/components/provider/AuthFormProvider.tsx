@@ -10,7 +10,7 @@ interface AuthFormProviderProps {
 
 /**
  * @description
- * AuthFormProviderは、新規登録フォームの状態をグローバルに管理するためのプロバイダー
+ * 認証フォームのためのコンテキストプロバイダー
  *
  * @param {ReactNode} children - 子コンポーネント
  * @returns {JSX.Element} - AuthFormProviderコンポーネント
