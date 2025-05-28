@@ -1,1 +1,1 @@
-export { default as RegisterFormProvider } from "./RegisterFormProvider";
+export { default as AuthFormProvider } from "./AuthFormProvider";

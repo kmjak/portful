@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { JSX } from "react";
 import Link from "next/link";
-import { RegisterFormProvider } from "@/components/provider";
+import { AuthFormProvider } from "@/components/provider";
 import { RegisterForm } from "@/components/auth/register";
 import { PageTitle, Text } from "@/components/ui";
 
@@ -23,9 +23,9 @@ export default function Register(): JSX.Element {
     <>
       <PageTitle>新規登録</PageTitle>
 
-      <RegisterFormProvider>
+      <AuthFormProvider>
         <RegisterForm />
-      </RegisterFormProvider>
+      </AuthFormProvider>
 
       <div className="flex flex-col mt-5 md:mt-10">
         <Text>
