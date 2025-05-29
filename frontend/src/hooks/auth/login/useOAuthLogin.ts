@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface UseOAuthLoginReturn {
-  isOAuthLogin: boolean;
+  isOAuthLoginLoading: boolean;
   handleLoginWithGithub: () => Promise<void>;
   handleLoginWithGoogle: () => Promise<void>;
 }
@@ -19,7 +19,7 @@ interface UseOAuthLoginReturn {
  * @returns {UseOAuthLoginReturn} - OAuthログイン処理を行う関数
  */
 export default function useOAuthLogin(): UseOAuthLoginReturn {
-  const [isOAuthLogin, setIsOAuthLogin] = useState<boolean>(false);
+  const [isOAuthLoginLoading, setIsOAuthLoginLoading] = useState<boolean>(false);
   const router = useRouter();
 
   /**
@@ -29,7 +29,7 @@ export default function useOAuthLogin(): UseOAuthLoginReturn {
    * @returns {Promise<void>}
    */
   const handleLoginWithGithub = async (): Promise<void> => {
-    setIsOAuthLogin(true);
+    setIsOAuthLoginLoading(true);
     try {
       const idToken = await loginWithGithubProvider();
 
@@ -46,7 +46,7 @@ export default function useOAuthLogin(): UseOAuthLoginReturn {
       }
       alert("GitHubでのログイン中にエラーが発生しました。");
     } finally {
-      setIsOAuthLogin(false);
+      setIsOAuthLoginLoading(false);
     }
   };
 
@@ -57,7 +57,7 @@ export default function useOAuthLogin(): UseOAuthLoginReturn {
    * @returns {Promise<void>}
    */
   const handleLoginWithGoogle = async (): Promise<void> => {
-    setIsOAuthLogin(true);
+    setIsOAuthLoginLoading(true);
     try {
       const idToken = await loginWithGoogleProvider();
 
@@ -74,12 +74,12 @@ export default function useOAuthLogin(): UseOAuthLoginReturn {
       }
       alert("Googleでのログイン中にエラーが発生しました。");
     } finally {
-      setIsOAuthLogin(false);
+      setIsOAuthLoginLoading(false);
     }
   };
 
   return {
-    isOAuthLogin,
+    isOAuthLoginLoading,
     handleLoginWithGithub,
     handleLoginWithGoogle,
   };
