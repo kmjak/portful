@@ -29,9 +29,9 @@ export default function AuthButtons({
   isAuthLoading,
   className,
 }: AuthButtonsProps): JSX.Element {
-  const { isOAuthLogin, handleLoginWithGithub, handleLoginWithGoogle } = useOAuthLogin();
+  const { isOAuthLoginLoading, handleLoginWithGithub, handleLoginWithGoogle } = useOAuthLogin();
 
-  const isLoading = isAuthLoading || isOAuthLogin;
+  const isLoading = isAuthLoading || isOAuthLoginLoading;
   return (
     <div className="flex flex-col mt-5 md:mt-10">
       <Button
