@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userId         Int      @id @default(autoincrement()) @map("user_id")
+  name           String?  @unique
+  firebaseUserId String   @unique @map("firebase_user_id")
+  createdAt      DateTime @default(now()) @map("created_at")
+  session        Session[] @relation("UserSessions")
+}
+
+model Session {
+  sessionToken String   @id @map("session_token")
+  userId       Int       @map("user_id")
+  createdAt    DateTime @default(now()) @map("created_at")
+  lastAccessed DateTime @default(now()) @map("last_accessed")
+  expiresAt    DateTime @map("expires_at")
+  user         User     @relation("UserSessions", fields: [userId], references: [userId])
+
+  @@index([lastAccessed], map: "Session_index_lastAccessed")
+  @@index([expiresAt], map: "Session_index_expireAt")
+}
