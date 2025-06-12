@@ -11,7 +11,7 @@ import { useFormContext } from "react-hook-form";
 
 interface UseLoginReturn {
   isLoginLoading: boolean;
-  onSubmitLogin: (registerData: Readonly<AuthFormData>) => Promise<void>;
+  onSubmitLogin: (loginData: Readonly<AuthFormData>) => Promise<void>;
 }
 
 /**
@@ -30,9 +30,9 @@ export default function useLogin(): UseLoginReturn {
    * @description
    * ログイン処理を開始する
    */
-  const onSubmitLogin = async (registerData: Readonly<AuthFormData>): Promise<void> => {
+  const onSubmitLogin = async (loginData: Readonly<AuthFormData>): Promise<void> => {
     setIsLoginLoading(true);
-    const { email, password } = registerData;
+    const { email, password } = loginData;
     try {
       const emailValidationResult: EmailValidationMessage = validateEmail({ email });
       const passwordValidationResult: PasswordValidationMessage = validatePassword({
