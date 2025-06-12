@@ -56,7 +56,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const isCookieSet = await setCookie({
       name: "sessionId",
       value: sessionId,
-      maxAge: 60 * 60 * 24 * 7,
+      maxAge: 60 * 60 * 24 * 3,
       path: "/",
     });
 
