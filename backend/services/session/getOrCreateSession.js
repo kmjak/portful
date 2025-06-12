@@ -8,9 +8,6 @@ import updateSessionWithToken from "../../models/session/updateSessionWithToken.
  * ユーザーIDを使用して、アクティブなセッションを取得または新規作成する関数
  *
  * @param userId - ユーザーID
- * @param oneWeekAgo - 現在から1週間前の日付
- * @param currentDate - 現在の日付
- * @param oneMonthFromNow - 現在から1ヶ月後の日付
  * @returns {Promise<Object>} セッションデータ
  */
 export default async function getOrCreateSession(userId) {
