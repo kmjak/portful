@@ -1,8 +1,9 @@
-import verifyFirebaseToken from "../../services/auth/verifyFirebaseToken.js";
-import getOrCreateUser from "../../services/user/getOrCreateUser.js";
-import getOrCreateSession from "../../services/session/getOrCreateSession.js";
+import verifyFirebaseToken from "../../services/auth/verifyFirebaseToken.ts";
+import getOrCreateUser from "../../services/user/getOrCreateUser.ts";
+import getOrCreateSession from "../../services/session/getOrCreateSession.ts";
+import { Request, Response } from "express";
 
-export default async function loginController(req, res) {
+export default async function loginController(req: Request, res: Response) {
   try {
     const authHeader = req.headers.authorization;
 
@@ -35,6 +36,6 @@ export default async function loginController(req, res) {
     if (process.env.NODE_ENV !== "development") {
       console.error("Login error:", error);
     }
-    return res.status(401).json({ error: "Unauthorized" });
+    res.status(401).json({ error: "Unauthorized" });
   }
 }

@@ -1,6 +1,6 @@
 import express from "express";
-import { apiKeyAuth } from "../../middleware/auth/apiKeyAuth.js";
-import loginController from "../../controllers/auth/loginController.js";
+import { apiKeyAuth } from "../../middleware/auth/apiKeyAuth.ts";
+import loginController from "../../controllers/auth/loginController.ts";
 
 const loginRouter = express.Router();
 

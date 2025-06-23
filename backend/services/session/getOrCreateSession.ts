@@ -1,7 +1,7 @@
 import { randomBytes } from "crypto";
-import createSession from "../../models/session/createSession.js";
-import getActiveSession from "../../models/session/getActiveSession.js";
-import updateSessionWithToken from "../../models/session/updateSessionWithToken.js";
+import createSession from "../../models/session/createSession.ts";
+import getActiveSession from "../../models/session/getActiveSession.ts";
+import updateSessionWithToken from "../../models/session/updateSessionWithToken.ts";
 
 /**
  * @description
@@ -10,7 +10,7 @@ import updateSessionWithToken from "../../models/session/updateSessionWithToken.
  * @param userId - ユーザーID
  * @returns {Promise<Object>} セッションデータ
  */
-export default async function getOrCreateSession(userId) {
+export default async function getOrCreateSession(userId: number) {
   const currentDate = new Date();
   const oneWeekAgo = new Date(currentDate.getTime() - 1000 * 60 * 60 * 24 * 7);
   const oneMonthFromNow = new Date(currentDate.getTime() + 1000 * 60 * 60 * 24 * 30);

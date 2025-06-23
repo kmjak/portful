@@ -1,4 +1,4 @@
-import { prismaClient } from "../../lib/prisma/client.js";
+import { prismaClient } from "../../lib/prisma/client.ts";
 
 /**
  * @description
@@ -10,7 +10,11 @@ import { prismaClient } from "../../lib/prisma/client.js";
  *
  * @returns {Promise<Object|null>} アクティブなセッションのデータ、存在しない場合は null
  */
-export default async function getActiveSession(userId, oneWeekAgo, currentDate) {
+export default async function getActiveSession(
+  userId: number,
+  oneWeekAgo: Date,
+  currentDate: Date
+) {
   const sessionData = await prismaClient.session.findFirst({
     where: {
       userId,

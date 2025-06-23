@@ -1,4 +1,4 @@
-import { prismaClient } from "../../lib/prisma/client.js";
+import { prismaClient } from "../../lib/prisma/client.ts";
 
 /**
  * @description
@@ -7,7 +7,7 @@ import { prismaClient } from "../../lib/prisma/client.js";
  * @param firebaseUserId - FirebaseのユーザーID
  * @returns {Promise<Object|null>} ユーザーデータ、存在しない場合は null
  */
-export default async function getUserWithFid(firebaseUserId) {
+export default async function getUserWithFid(firebaseUserId: string) {
   const userData = await prismaClient.user.findUnique({
     where: {
       firebaseUserId,

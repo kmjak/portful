@@ -1,5 +1,5 @@
-import createUser from "../../models/user/createUser.js";
-import getUserWithFid from "../../models/user/getUserWithFid.js";
+import createUser from "../../models/user/createUser.ts";
+import getUserWithFid from "../../models/user/getUserWithFid.ts";
 
 /**
  * @description
@@ -9,7 +9,7 @@ import getUserWithFid from "../../models/user/getUserWithFid.js";
  * @param firebaseUserId - FirebaseのユーザーID
  * @returns {Promise<Object>} ユーザーデータ
  */
-export default async function getOrCreateUser(firebaseUserId) {
+export default async function getOrCreateUser(firebaseUserId: string) {
   let userData = await getUserWithFid(firebaseUserId);
   if (userData === null) {
     userData = await createUser(firebaseUserId);
