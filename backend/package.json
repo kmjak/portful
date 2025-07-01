@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "nodemon --exec node --loader ts-node/esm --trace-warnings server.ts",
+    "dev": "nodemon --exec \"node --import=tsx src/server.ts\"",
+    "dev:ts-node": "nodemon --exec \"node --import=ts-node/esm src/server.ts\"",
     "lint": "eslint . --ext .ts"
   },
   "keywords": [],
