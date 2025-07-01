@@ -1,4 +1,4 @@
-import { prismaClient } from "../../lib/prisma/client.ts";
+import { prismaClient } from "../../lib/prisma/client.js";
 
 /**
  * @description

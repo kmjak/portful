@@ -1,7 +1,7 @@
-import { PORT } from "./config/env/port.ts";
-import "./lib/env/dotenv.ts";
-import { app, server } from "./lib/express/expressServer.ts";
-import authRouter from "./routes/auth/auth.ts";
+import { PORT } from "./config/env/port.js";
+import "./lib/env/dotenv.js";
+import { app, server } from "./lib/express/expressServer.js";
+import authRouter from "./routes/auth/auth.js";
 
 app.use("/auth", authRouter);
 

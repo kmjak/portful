@@ -1,5 +1,5 @@
-import createUser from "../../models/user/createUser.ts";
-import getUserWithFid from "../../models/user/getUserWithFid.ts";
+import createUser from "../../models/user/createUser.js";
+import getUserWithFid from "../../models/user/getUserWithFid.js";
 
 /**
  * @description

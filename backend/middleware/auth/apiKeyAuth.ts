@@ -1,4 +1,4 @@
-import { hostApiKey } from "../../config/host/hostApiKey.ts";
+import { hostApiKey } from "../../config/host/hostApiKey.js";
 import { Request, Response, NextFunction } from "express";
 
 export function apiKeyAuth(req: Request, res: Response, next: NextFunction) {

@@ -1,6 +1,6 @@
-import verifyFirebaseToken from "../../services/auth/verifyFirebaseToken.ts";
-import getOrCreateUser from "../../services/user/getOrCreateUser.ts";
-import getOrCreateSession from "../../services/session/getOrCreateSession.ts";
+import verifyFirebaseToken from "../../services/auth/verifyFirebaseToken.js";
+import getOrCreateUser from "../../services/user/getOrCreateUser.js";
+import getOrCreateSession from "../../services/session/getOrCreateSession.js";
 import { Request, Response } from "express";
 
 export default async function loginController(req: Request, res: Response) {

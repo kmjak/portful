@@ -1,7 +1,7 @@
 import { randomBytes } from "crypto";
-import createSession from "../../models/session/createSession.ts";
-import getActiveSession from "../../models/session/getActiveSession.ts";
-import updateSessionWithToken from "../../models/session/updateSessionWithToken.ts";
+import createSession from "../../models/session/createSession.js";
+import getActiveSession from "../../models/session/getActiveSession.js";
+import updateSessionWithToken from "../../models/session/updateSessionWithToken.js";
 
 /**
  * @description

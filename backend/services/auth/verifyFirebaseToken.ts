@@ -1,4 +1,4 @@
-import { admin } from "../../lib/firebase/firebaseAdmin.ts";
+import { admin } from "../../lib/firebase/firebaseAdmin.js";
 
 /**
  * @description
