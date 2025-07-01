@@ -14,7 +14,7 @@ const eslintConfig = [
   ...compat.extends("plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"),
 
   {
-    files: ["**/*.{ts,tsx,}"],
+    files: ["**/*.{ts}"],
     languageOptions: {
       globals: globals.node,
       parserOptions: {
