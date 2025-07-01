@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "nodemon --exec \"node src/server.ts\"",
+    "dev": "nodemon --exec \"tsx src/server.ts\"",
     "dev:ts-node": "nodemon --exec \"node --import=ts-node/esm src/server.ts\"",
     "lint": "eslint . --ext .ts"
   },
@@ -32,6 +32,7 @@
     "nodemon": "^3.1.10",
     "prisma": "^6.7.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   }
 }
