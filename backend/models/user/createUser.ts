@@ -7,7 +7,7 @@ import { prismaClient } from "../../lib/prisma/client.js";
  * @param firebaseUserId - FirebaseのユーザーID
  * @returns {Promise<Object|null>} ユーザーデータ、失敗した場合は null
  */
-export default async function createUser(firebaseUserId) {
+export default async function createUser(firebaseUserId: string) {
   const data = await prismaClient.user.create({
     data: {
       firebaseUserId,

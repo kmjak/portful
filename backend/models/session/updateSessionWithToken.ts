@@ -8,7 +8,7 @@ import { prismaClient } from "../../lib/prisma/client.js";
  * @param currentDate - 現在の日付
  * @return {Promise<Object>} 更新されたセッションのデータ
  */
-export default async function updateSessionWithToken(sessionToken, currentDate) {
+export default async function updateSessionWithToken(sessionToken: string, currentDate: Date) {
   const session = await prismaClient.session.update({
     where: {
       sessionToken,

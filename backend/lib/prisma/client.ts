@@ -1,10 +1,13 @@
 import { PrismaClient } from "@prisma/client";
 
+declare global {
+  var prisma: PrismaClient | undefined;
+}
 /**
  * グローバルスコープに格納するための一時オブジェクト
  * PrismaClient の開発中のインスタンス重複生成を防ぐために使用
  */
-const globalForPrisma = globalThis;
+const globalForPrisma = globalThis as typeof globalThis & { prisma?: PrismaClient };
 
 /**
  * Prisma クライアントのシングルトンインスタンス

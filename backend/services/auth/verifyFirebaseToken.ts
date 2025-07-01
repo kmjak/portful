@@ -7,7 +7,7 @@ import { admin } from "../../lib/firebase/firebaseAdmin.js";
  * @param idToken - FirebaseのIDトークン
  * @returns - ユーザーID
  */
-export default async function verifyFirebaseToken(idToken) {
+export default async function verifyFirebaseToken(idToken: string) {
   try {
     const { user_id: firebaseUserId } = await admin.auth().verifyIdToken(idToken);
 

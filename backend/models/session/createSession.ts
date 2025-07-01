@@ -10,7 +10,11 @@ import { prismaClient } from "../../lib/prisma/client.js";
  *
  * @returns {Promise<Object>} 新しいセッションのデータ
  */
-export default async function createSession(sessionToken, userId, oneMonthFromNow) {
+export default async function createSession(
+  sessionToken: string,
+  userId: number,
+  oneMonthFromNow: Date
+) {
   const newSession = await prismaClient.session.create({
     data: {
       sessionToken,
