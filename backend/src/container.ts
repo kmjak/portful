@@ -3,7 +3,7 @@ import { EnvHostConfigProvider } from "@/infrastructure/provider/host/EnvHostCon
 import "reflect-metadata";
 import { container } from "tsyringe";
 import { FirebaseConfigProvider } from "./domain/provider/firebase/FirebaseConfigProvider";
-import { EnvFirebaseConfig } from "./infrastructure/provider/firebase/EnvFirebaseConfig";
+import { EnvFirebaseConfigProvider } from "./infrastructure/provider/firebase/EnvFirebaseConfigProvider";
 import { EnvLoader } from "./interface/config/EnvLoader";
 
 EnvLoader.load();
@@ -14,5 +14,5 @@ container.register<HostConfigProvider>("HostConfigProvider", {
 });
 
 container.register<FirebaseConfigProvider>("FirebaseConfigProvider", {
-  useClass: EnvFirebaseConfig,
+  useClass: EnvFirebaseConfigProvider,
 });
