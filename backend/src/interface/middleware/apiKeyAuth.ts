@@ -1,5 +1,5 @@
 import { ApiKeyAuthUseCase } from "@/usecase/middleware/ApiKeyAuthUseCase";
-import { Request, Response, NextFunction } from "express";
+import { NextFunction, Request, Response } from "express";
 import { container } from "tsyringe";
 
 /**
@@ -17,12 +17,17 @@ export function apiKeyAuth(req: Request, res: Response, next: NextFunction): voi
     return;
   }
 
-  const apiKeyAuthUseCase = container.resolve(ApiKeyAuthUseCase);
-  const isValid = apiKeyAuthUseCase.execute(apiKey);
-  if (isValid === false) {
-    res.status(401).json({ message: "Unauthorized: API key is invalid" });
-    return;
-  }
+  try {
+    const apiKeyAuthUseCase = container.resolve(ApiKeyAuthUseCase);
+    const isValid = apiKeyAuthUseCase.execute(apiKey);
+    if (isValid === false) {
+      res.status(401).json({ message: "Unauthorized: API key is invalid" });
+      return;
+    }
 
-  next();
+    next();
+  } catch (error) {
+    console.error("[apiKeyAuth] APIキーの検証に失敗しました:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 }
