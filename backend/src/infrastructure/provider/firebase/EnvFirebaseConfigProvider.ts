@@ -12,10 +12,17 @@ export class EnvFirebaseConfigProvider implements FirebaseConfigProvider {
    * @throws {Error} - 環境変数が設定されていない場合
    */
   public load(): FirebaseConfig {
-    const projectId = ProjectId.of(process.env.FIREBASE_PROJECT_ID || "");
-    const clientEmail = ClientEmail.of(process.env.FIREBASE_CLIENT_EMAIL || "");
-    const privateKey = PrivateKey.of(process.env.FIREBASE_PRIVATE_KEY || "");
+    try {
+      const projectId = ProjectId.of(process.env.FIREBASE_PROJECT_ID || "");
+      const clientEmail = ClientEmail.of(process.env.FIREBASE_CLIENT_EMAIL || "");
+      const privateKey = PrivateKey.of(process.env.FIREBASE_PRIVATE_KEY || "");
 
-    return FirebaseConfig.create(projectId, clientEmail, privateKey);
+      return FirebaseConfig.create(projectId, clientEmail, privateKey);
+    } catch (error) {
+      throw new Error(`
+        [EnvFirebaseConfigProvider] Firebaseの環境変数に不正な値が存在します。
+        ${error}
+      `);
+    }
   }
 }
