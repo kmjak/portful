@@ -16,7 +16,7 @@ export class ApiKeyAuthUseCase {
   /**
    * @description APIキーを検証するメソッド
    * @param {string} apiKey - 検証するAPIキー
-   * @returns {ApiKey} APIキーが有効な場合はtrue、無効な場合はfalseを返す
+   * @returns {boolean} APIキーが有効な場合はtrue、無効な場合はfalseを返す
    * @throws {Error} - APIキーの検証に失敗した場合にエラーをスローする
    */
   public execute(apiKey: string): boolean {
