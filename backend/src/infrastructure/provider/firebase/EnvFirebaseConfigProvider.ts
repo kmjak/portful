@@ -2,10 +2,10 @@ import { ClientEmail, FirebaseConfig, PrivateKey, ProjectId } from "@/domain/mod
 import { FirebaseConfigProvider } from "@/domain/provider/firebase/FirebaseConfigProvider";
 
 /**
- * @class EnvFirebaseConfig
+ * @class EnvFirebaseConfigProvider
  * @description 環境変数からFirebaseの設定を提供するクラス
  */
-export class EnvFirebaseConfig implements FirebaseConfigProvider {
+export class EnvFirebaseConfigProvider implements FirebaseConfigProvider {
   /**
    * @description 環境変数からFirebaseの設定を読み込み、FirebaseConfigを返す。
    * @returns {FirebaseConfig} FirebaseConfig - Firebaseの設定
