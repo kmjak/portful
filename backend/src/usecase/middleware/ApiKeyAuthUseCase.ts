@@ -25,11 +25,8 @@ export class ApiKeyAuthUseCase {
       const envApiKey = hostConfig.getApiKey();
 
       return envApiKey.equals(ApiKey.of(apiKey));
-    } catch (error) {
-      throw new Error(`
-        [ApiKeyAuthUseCase] APIキーの検証に失敗しました。
-        ${error}
-      `);
+    } catch {
+      return false;
     }
   }
 }
