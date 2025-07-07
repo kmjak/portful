@@ -12,9 +12,16 @@ export class EnvHostConfigProvider implements HostConfigProvider {
    * @throws {Error} - 環境変数が設定されていない場合
    */
   public load(): HostConfig {
-    const frontendUrl = FrontendUrl.of(process.env.FRONTEND_URL || "");
-    const apiKey = ApiKey.of(process.env.HOST_X_API_KEY || "");
+    try {
+      const frontendUrl = FrontendUrl.of(process.env.FRONTEND_URL || "");
+      const apiKey = ApiKey.of(process.env.HOST_X_API_KEY || "");
 
-    return HostConfig.create(frontendUrl, apiKey);
+      return HostConfig.create(frontendUrl, apiKey);
+    } catch (error) {
+      throw new Error(`
+        [EnvHostConfigProvider] ホストの環境変数に不正な値が存在します。
+        ${error}
+      `);
+    }
   }
 }
