@@ -32,7 +32,7 @@ export class UserId {
    * @throws {Error} ユーザーIDが空または無効な場合にエラーをスロー
    */
   private static validate(value: string): void {
-    if (!value || value.trim() !== "") {
+    if (!value || value.trim() === "") {
       throw new Error("User ID is required and cannot be empty.");
     }
   }
