@@ -13,7 +13,7 @@ export class HostConfig {
    * @param {FrontendUrl} frontendUrl - FrontendのURL
    * @param {ApiKey} apiKey - APIキー
    */
-  public constructor(
+  private constructor(
     private readonly frontendUrl: FrontendUrl,
     private readonly apiKey: ApiKey
   ) {}

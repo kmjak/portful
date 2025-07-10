@@ -8,7 +8,7 @@ export class FrontendUrl {
    * @description コンストラクタ
    * @param {string} value - Frontend URLの値
    */
-  public constructor(private readonly value: string) {}
+  private constructor(private readonly value: string) {}
 
   /**
    * @description Frontend URLのインスタンスを生成するメソッド

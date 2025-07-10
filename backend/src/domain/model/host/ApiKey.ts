@@ -8,7 +8,7 @@ export class ApiKey {
    * @description コンストラクタ
    * @param {string} value - API Keyの値
    */
-  public constructor(private readonly value: string) {}
+  private constructor(private readonly value: string) {}
 
   /**
    * @description API Keyのインスタンスを生成するメソッド
