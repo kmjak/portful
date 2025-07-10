@@ -10,7 +10,7 @@ import { injectable, singleton } from "tsyringe";
 export class PrismaAdmin {
   private readonly prisma: PrismaClient;
 
-  constructor() {
+  public constructor() {
     this.prisma = new PrismaClient({
       log: ["query", "warn", "error"],
     });
