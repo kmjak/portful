@@ -12,7 +12,7 @@ export class FirebaseAuthService {
    * @constructor
    * @param {FirebaseAdmin} admin - Firebase Admin SDKのインスタンス
    */
-  constructor(@inject(FirebaseAdmin) private admin: FirebaseAdmin) {}
+  public constructor(@inject(FirebaseAdmin) private admin: FirebaseAdmin) {}
 
   /**
    * @description FirebaseのIDトークンを検証し、Firebase User IDを取得するメソッド

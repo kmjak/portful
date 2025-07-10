@@ -12,7 +12,7 @@ import { inject, injectable, singleton } from "tsyringe";
 export class FirebaseAdmin {
   private app: admin.app.App | undefined;
 
-  constructor(
+  public constructor(
     @inject("FirebaseConfigProvider")
     private readonly firebaseConfigProvider: FirebaseConfigProvider
   ) {}
