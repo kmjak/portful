@@ -1,1 +1,1 @@
-export { UserId } from "./UserId.js";
+export { FirebaseUserId } from "./FirebaseUserId.js";
