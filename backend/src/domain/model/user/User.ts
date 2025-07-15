@@ -1,4 +1,4 @@
-import { CreatedAt } from "./CreatedAt";
+import { CreatedAt } from "@/domain/model/common";
 import { FirebaseUserId } from "./FirebaseUserId";
 import { UserId } from "./UserId";
 import { UserName } from "./UserName";

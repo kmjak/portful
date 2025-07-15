@@ -1,4 +1,5 @@
-import { CreatedAt, FirebaseUserId, User, UserId, UserName } from "@/domain/model/user";
+import { CreatedAt } from "@/domain/model/common";
+import { FirebaseUserId, User, UserId, UserName } from "@/domain/model/user";
 import { UserRepository } from "@/domain/repository/UserRepository";
 import { PrismaClient } from "@/infrastructure/prisma/PrismaClient";
 import { inject, injectable } from "tsyringe";
