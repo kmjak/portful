@@ -8,7 +8,7 @@ export class ClientEmail {
    * @description コンストラクタ
    * @param {string} value - FirebaseのClient Email
    */
-  public constructor(private value: string) {}
+  private constructor(private readonly value: string) {}
 
   /**
    * @description FirebaseのClient Emailのインスタンスを生成するメソッド
