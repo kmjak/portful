@@ -16,7 +16,7 @@ export class FirebaseConfig {
    * @param {ClientEmail} clientEmail - FirebaseのClient Email
    * @param {PrivateKey} privateKey - FirebaseのPrivate Key
    */
-  public constructor(
+  private constructor(
     private readonly projectId: ProjectId,
     private readonly clientEmail: ClientEmail,
     private readonly privateKey: PrivateKey
