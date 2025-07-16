@@ -4,7 +4,7 @@ import { Request, Response } from "express";
 import { inject, injectable } from "tsyringe";
 
 /**
- * @class LoginController
+ * @class LoginControllerImpl
  * @description ユーザーログインを処理するコントローラー
  */
 @injectable()
