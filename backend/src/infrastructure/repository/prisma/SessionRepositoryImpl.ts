@@ -15,7 +15,7 @@ export class SessionRepositoryImpl implements SessionRepository {
    * @constructor
    * @param {PrismaClient} prismaClient - Prismaクライアントのインスタンス
    */
-  constructor(@inject(PrismaClient) private readonly prismaClient: PrismaClient) {}
+  constructor(@inject("PrismaClient") private readonly prismaClient: PrismaClient) {}
   /**
    * @description prismaを使用して新しいセッションを作成するメソッド
    * @param {SessionToken} sessionToken - セッショントークン

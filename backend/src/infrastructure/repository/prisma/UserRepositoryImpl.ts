@@ -14,7 +14,7 @@ export class UserRepositoryImpl implements UserRepository {
    * @constructor
    * @param {PrismaClient} prismaAdmin - Prismaクライアントのインスタンス
    */
-  constructor(@inject(PrismaClient) private readonly prismaAdmin: PrismaClient) {}
+  constructor(@inject("PrismaClient") private readonly prismaAdmin: PrismaClient) {}
 
   /**
    * @description Firebase User IDを使用してPrismaからユーザーを取得するメソッド

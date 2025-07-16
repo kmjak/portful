@@ -13,7 +13,7 @@ export class FirebaseAdmin {
   private app: admin.app.App | undefined;
 
   public constructor(
-    @inject("FirebaseConfigProvider")
+    @inject("EnvFirebaseConfigProvider")
     private readonly firebaseConfigProvider: FirebaseConfigProvider
   ) {}
 
