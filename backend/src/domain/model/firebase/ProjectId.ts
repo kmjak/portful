@@ -8,7 +8,7 @@ export class ProjectId {
    * @description コンストラクタ
    * @param {string} value - FirebaseのProject ID
    */
-  public constructor(private readonly value: string) {}
+  private constructor(private readonly value: string) {}
 
   /**
    * @description FirebaseのProject IDのインスタンスを生成するメソッド
