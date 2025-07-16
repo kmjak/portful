@@ -17,12 +17,12 @@ export class LoginUseCaseImpl implements LoginUseCase {
    * @constructor
    * @param {FirebaseAuthService} authService - Firebase認証サービス
    * @param {UserRepository} userRepository - ユーザーレポジトリ
-   * @param {SessionRepository} sessionRepo - セッションレポジトリ
+   * @param {SessionRepository} sessionRepository - セッションレポジトリ
    */
   constructor(
     @inject("FirebaseAuthService") private authService: FirebaseAuthService,
     @inject("UserRepository") private userRepository: UserRepository,
-    @inject("SessionRepository") private sessionRepo: SessionRepository
+    @inject("SessionRepository") private sessionRepository: SessionRepository
   ) {}
 
   /**
@@ -39,13 +39,13 @@ export class LoginUseCaseImpl implements LoginUseCase {
       user = await this.userRepository.createUser(firebaseUserId);
     }
 
-    let session = await this.sessionRepo.getActiveSessionByUserId(
+    let session = await this.sessionRepository.getActiveSessionByUserId(
       user.getUserId(),
       CurrentDate.of(new Date())
     );
     if (!session) {
       const token = randomBytes(32).toString("hex");
-      session = await this.sessionRepo.createSession(
+      session = await this.sessionRepository.createSession(
         SessionToken.of(token),
         user.getUserId(),
         CurrentDate.of(new Date())
