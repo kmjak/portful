@@ -15,10 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Edolf Type",
-    default: "Edolf Type",
+    template: "%s | Portful",
+    default: "Portful",
   },
-  description: "リアルタイム対戦型タイピングゲーム。お互いの選んだ文章を打ち合い、勝敗を競い合え！",
+  description:
+    "エンジニア特化の就活プラットフォームPortful。学生・学校・企業を繋ぎ、成績連携であなたのスキルを証明。未来のキャリアに繋がる出会いを創出します。",
   icons: {
     icon: "/favicon.ico",
   },
