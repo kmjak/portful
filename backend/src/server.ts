@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import "./container";
 import { LoginControllerImpl } from "@/interface/controller/auth/LoginControllerImpl";
 import express from "express";
