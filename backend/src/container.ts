@@ -12,8 +12,15 @@ import { EnvFirebaseConfigProvider } from "./infrastructure/provider/firebase/En
 import { EnvLoader } from "./interface/config/EnvLoader";
 import { FirebaseAdmin } from "@/infrastructure/firebase/FirebaseAdmin";
 import { PrismaClient } from "@/infrastructure/prisma/PrismaClient";
+import { LoginUseCase } from "@/usecase/auth/LoginUseCase";
+import { LoginUseCaseImpl } from "@/usecase/auth/LoginUseCaseImpl";
 
 EnvLoader.load();
+
+// usecase
+container.register<LoginUseCase>("LoginUseCase", {
+  useClass: LoginUseCaseImpl,
+});
 
 // repository
 container.register<SessionRepository>("SessionRepository", {
