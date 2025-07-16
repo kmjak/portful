@@ -41,10 +41,5 @@ export class ExpiresAt {
     if (isNaN(value.getTime())) {
       throw new Error("ExpiresAt must be a valid date.");
     }
-
-    const now = new Date();
-    if (value <= now) {
-      throw new Error("ExpiresAt must be a future date.");
-    }
   }
 }
