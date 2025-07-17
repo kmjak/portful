@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased  text-gray-200 bg-neutral-900 select-none`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-gray-200 bg-neutral-900 select-none`}
       >
         <Header />
         <main className="mx-6 md:mx-10 lg:mx-20">{children}</main>
