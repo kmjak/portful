@@ -13,5 +13,5 @@ interface LayoutProps {
  * @returns {JSX.Element} - レイアウトコンポーネント
  */
 export default function Layout({ children }: LayoutProps): JSX.Element {
-  return <main className="flex flex-col items-center my-8 md:my-12">{children}</main>;
+  return <div className="flex flex-col items-center my-8 md:my-12">{children}</div>;
 }
