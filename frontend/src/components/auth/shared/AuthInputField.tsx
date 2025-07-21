@@ -46,7 +46,7 @@ export default function AuthInputField({
         className="w-56 sm:w-64 md:w-80 lg:w-96"
         {...register(id, registerOptions)}
       />
-      {errors?.message && <p className="text-red-500 text-sm mt-1 select-none">{errors.message}</p>}
+      {errors?.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
     </div>
   );
 }

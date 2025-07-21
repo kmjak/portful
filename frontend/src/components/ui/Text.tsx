@@ -17,7 +17,7 @@ interface TextProps extends React.HTMLProps<HTMLParagraphElement> {
  */
 export default function Text({ children, className, ...props }: TextProps): JSX.Element {
   return (
-    <p className={cn("text-sm md:text-base lg:text-lg select-none", className)} {...props}>
+    <p className={cn("text-sm md:text-base lg:text-lg", className)} {...props}>
       {children}
     </p>
   );
