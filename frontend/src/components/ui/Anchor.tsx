@@ -10,9 +10,8 @@ interface LinkProps extends Omit<LinkType, "className"> {
 /**
  * @description 再利用可能なAnchorコンポーネント
  * @param {ReactNode} children - リンクの内容
- * @param {Url} href - リンク先のURL
  * @param {string} [className] - 追加のCSSクラス
- * @param {LinkProps} props - HTMLの標準的なリンク属性のprops
+ * @param {LinkProps} props - Next.jsのLinkコンポーネントのprops
  * @returns {JSX.Element} - Anchorコンポーネント
  */
 export default function Anchor({ children, href, className, ...props }: LinkProps): JSX.Element {
