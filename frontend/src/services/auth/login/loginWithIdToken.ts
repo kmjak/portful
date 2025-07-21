@@ -1,5 +1,3 @@
-import { hostUrl } from "@/config/host";
-
 interface LoginWithIdTokenProps {
   readonly idToken: string;
 }
@@ -17,7 +15,7 @@ export default async function loginWithIdToken({
   idToken,
 }: LoginWithIdTokenProps): Promise<boolean> {
   try {
-    const response: Response = await fetch(`${hostUrl}/api/v1/auth/login`, {
+    const response: Response = await fetch(`/api/v1/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
