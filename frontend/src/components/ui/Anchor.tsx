@@ -1,11 +1,9 @@
 import cn from "@/utils/tailwindcss/cn";
-import { Url } from "next/dist/shared/lib/router/router";
 import Link, { LinkProps as LinkType } from "next/link";
 import { JSX, ReactNode } from "react";
 
-interface LinkProps extends LinkType {
+interface LinkProps extends Omit<LinkType, "className"> {
   children: ReactNode;
-  href: Url;
   className?: string;
 }
 
