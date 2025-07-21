@@ -1,5 +1,4 @@
-import { Text } from "@/components/ui";
-import Link from "next/link";
+import { Anchor, Text } from "@/components/ui";
 import { JSX } from "react";
 
 /**
@@ -12,9 +11,9 @@ export default function Header(): JSX.Element {
   return (
     <header className="flex items-center justify-between p-2 md:p-4 border-b border-gray-600 text-gray-200">
       <section>
-        <Link href={"/"} className="text-2xl md:text-3xl font-bold cursor-pointer">
+        <Anchor href={"/"} className="font-bold text-2xl sm:text-2xl md:text-3xl lg:text-3xl">
           Portful
-        </Link>
+        </Anchor>
         <nav></nav>
       </section>
       <section>
