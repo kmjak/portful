@@ -21,7 +21,7 @@ export default function Label({ children, className, ...props }: LabelProps): JS
   return (
     <label
       className={cn(
-        "text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl px-2 py-1 md:px-4 lg:py-2 rounded-md cursor-pointer select-none",
+        "text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl px-2 py-1 md:px-4 lg:py-2 rounded-md cursor-pointer",
         className
       )}
       {...props}
