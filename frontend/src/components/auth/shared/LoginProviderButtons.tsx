@@ -1,5 +1,6 @@
 import { JSX } from "react";
 import { Button } from "@/components/ui";
+import { BsGithub, BsGoogle } from "react-icons/bs";
 
 interface LoginProviderButtonsProps {
   isLoading: boolean;
@@ -26,10 +27,16 @@ export default function LoginProviderButtons({
   return (
     <>
       <Button onClick={handleLoginWithGithub} className={className} disabled={isLoading}>
-        GitHubでログイン
+        <div className="flex justify-center items-center gap-x-2">
+          <BsGithub />
+          GitHubでログイン
+        </div>
       </Button>
       <Button onClick={handleLoginWithGoogle} className={className} disabled={isLoading}>
-        Googleでログイン
+        <div className="flex justify-center items-center gap-x-2">
+          <BsGoogle />
+          Googleでログイン
+        </div>
       </Button>
     </>
   );
