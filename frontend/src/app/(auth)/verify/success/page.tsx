@@ -1,5 +1,4 @@
-import { PageTitle, Text } from "@/components/ui";
-import Link from "next/link";
+import { Anchor, PageTitle, Text } from "@/components/ui";
 import { JSX } from "react";
 
 /**
@@ -17,9 +16,9 @@ export default function Success(): JSX.Element {
       <Text className="text-center">メールアドレスの認証に成功しました。</Text>
 
       <Text className="text-center">
-        <Link href="/login" className="text-blue-500 hover:underline">
+        <Anchor href="/login" className="text-blue-500">
           ログインページへ戻る
-        </Link>
+        </Anchor>
       </Text>
     </div>
   );

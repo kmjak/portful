@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 import { JSX } from "react";
-import Link from "next/link";
 import { AuthFormProvider } from "@/components/provider";
 import { RegisterForm } from "@/components/auth/register";
-import { PageTitle, Text } from "@/components/ui";
+import { Anchor, PageTitle, Text } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "新規登録",
@@ -30,9 +29,9 @@ export default function Register(): JSX.Element {
       <div className="flex flex-col mt-5 md:mt-10">
         <Text>
           すでにアカウントをお持ちですか？
-          <Link href="/login" className="text-blue-500 hover:underline">
+          <Anchor href="/login" className="text-blue-500">
             ログイン
-          </Link>
+          </Anchor>
         </Text>
       </div>
     </>
