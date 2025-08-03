@@ -72,7 +72,7 @@ export default function useRegister(): UseRegisterReturn {
         throw new Error("User registration failed");
       }
 
-      router.push("/login");
+      router.push("/client/login");
       alert("確認メールを送信しました。メールを確認してください。");
     } catch (error) {
       if (process.env.NODE_ENV === "development") {

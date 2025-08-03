@@ -16,7 +16,7 @@ export default function Failure(): JSX.Element {
       <Text className="text-center">メールアドレスの認証に失敗しました。</Text>
 
       <Text className="text-center">
-        <Anchor href="/register" className="text-blue-500">
+        <Anchor href="/client/register" className="text-blue-500">
           新規登録ページに戻る
         </Anchor>
       </Text>

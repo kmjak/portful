@@ -16,7 +16,7 @@ export default function Success(): JSX.Element {
       <Text className="text-center">メールアドレスの認証に成功しました。</Text>
 
       <Text className="text-center">
-        <Anchor href="/login" className="text-blue-500">
+        <Anchor href="/client/login" className="text-blue-500">
           ログインページへ戻る
         </Anchor>
       </Text>

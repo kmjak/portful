@@ -30,11 +30,11 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     await checkActionCode(auth, oobCode);
     await applyActionCode(auth, oobCode);
 
-    return NextResponse.redirect(new URL("/verify/success", request.url));
+    return NextResponse.redirect(new URL("/client/verify/success", request.url));
   } catch (error) {
     if (process.env.NODE_ENV === "development") {
       console.error("Error applying action code:", error);
     }
-    return NextResponse.redirect(new URL("/verify/failure", request.url));
+    return NextResponse.redirect(new URL("/client/verify/failure", request.url));
   }
 }

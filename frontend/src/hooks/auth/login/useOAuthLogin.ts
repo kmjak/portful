@@ -38,7 +38,7 @@ export default function useOAuthLogin(): UseOAuthLoginReturn {
       }
 
       if (await loginWithIdToken({ idToken })) {
-        router.replace("/mypage");
+        router.replace("/client");
       }
     } catch (error) {
       if (process.env.NODE_ENV === "development") {

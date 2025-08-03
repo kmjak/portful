@@ -29,7 +29,7 @@ export default function Login(): JSX.Element {
       <div className="flex flex-col mt-5 md:mt-10">
         <Text>
           まだアカウントをお持ちでないですか？
-          <Anchor href="/register" className="text-blue-500">
+          <Anchor href="/client/register" className="text-blue-500">
             新規登録
           </Anchor>
         </Text>
