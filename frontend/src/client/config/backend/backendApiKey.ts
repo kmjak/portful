@@ -8,4 +8,4 @@ if (process.env.NODE_ENV === "production") {
   }
 }
 
-export const backendApiKey: string = envApiKey || "secret";
+export const backendApiKey: string = envApiKey || "";
