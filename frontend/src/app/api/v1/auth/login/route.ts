@@ -1,8 +1,8 @@
 "server-only";
 
 import { NextRequest, NextResponse } from "next/server";
-import { backendUrl, backendApiKey } from "@/config/backend";
-import { setCookie } from "@/services/cookie";
+import { backendUrl, backendApiKey } from "@/client/config/backend";
+import { setCookie } from "@/share/services/cookie";
 
 /**
  * @description

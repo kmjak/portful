@@ -1,4 +1,4 @@
-import { Anchor, PageTitle, Text } from "@/components/ui";
+import { Anchor, PageTitle, Text } from "@/share/components/ui";
 import { JSX } from "react";
 
 /**

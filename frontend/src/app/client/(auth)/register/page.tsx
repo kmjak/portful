@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { JSX } from "react";
-import { AuthFormProvider } from "@/components/provider";
-import { RegisterForm } from "@/components/auth/register";
-import { Anchor, PageTitle, Text } from "@/components/ui";
+import { AuthFormProvider } from "@/client/components/provider";
+import { RegisterForm } from "@/client/components/auth/register";
+import { Anchor, PageTitle, Text } from "@/share/components/ui";
 
 export const metadata: Metadata = {
   title: "新規登録",

@@ -1,6 +1,6 @@
 "server-only";
 
-import { auth } from "@/lib/firebase/firebase";
+import { auth } from "@/client/lib/firebase";
 import { applyActionCode, checkActionCode } from "firebase/auth";
 import { NextRequest, NextResponse } from "next/server";
 

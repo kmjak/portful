@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { JSX } from "react";
-import { AuthFormProvider } from "@/components/provider";
-import { Anchor, PageTitle, Text } from "@/components/ui";
-import { LoginForm } from "@/components/auth/login";
+import { AuthFormProvider } from "@/client/components/provider";
+import { Anchor, PageTitle, Text } from "@/share/components/ui";
+import { LoginForm } from "@/client/components/auth/login";
 
 export const metadata: Metadata = {
   title: "ログイン",
